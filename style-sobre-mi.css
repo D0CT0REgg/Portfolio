@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Changa_one';
+	src: url('fonts/Changa_One/ChangaOne-Regular.ttf') format('truetype'),
+		 url('fonts/Changa_One/ChangaOne-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
+		 url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/* ===================== */
+/* 🌍 BASE */
+/* ===================== */
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-image: url('img/fondo.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #4A2C1A;
+	min-height: 100vh;
+}
+
+/* ===================== */
+/* 🟤 HEADER */
+/* ===================== */
+
+#header-principal {
+	background: linear-gradient(135deg, rgba(92, 61, 46, 0.85), rgba(166, 137, 104, 0.85));
+	padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 60px);
+	text-align: center;
+}
+
+#titulo-principal {
+	font-family: "Changa_one", serif;
+	font-size: clamp(2.5rem, 8vw, 7rem);
+	color: #F5E6D3;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== */
+/* 📦 CONTENIDO */
+/* ===================== */
+
+#contenido-principal {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 60px);
+}
+
+/* ===================== */
+/* 🧱 BLOQUES */
+/* ===================== */
+
+.bloque {
+	background: linear-gradient(135deg, rgba(215,195,165,0.75), rgba(190,160,130,0.7));
+	padding: clamp(25px, 5vw, 50px);
+	margin-bottom: clamp(30px, 6vw, 60px);
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	backdrop-filter: blur(10px);
+}
+
+.bloque.intro {
+	background: linear-gradient(135deg, rgba(230,210,180,0.8), rgba(210,180,150,0.75));
+	padding: clamp(35px, 6vw, 70px);
+}
+
+/* ===================== */
+/* ✏️ TEXTOS */
+/* ===================== */
+
+.texto-intro {
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+	text-align: center;
+	color: #3E2723;
+}
+
+.texto-normal {
+	font-size: clamp(1rem, 2vw, 1.1rem);
+	color: #3E2723;
+	line-height: 1.8;
+}
+
+/* ===================== */
+/* 🏷️ TÍTULOS */
+/* ===================== */
+
+.titulo-seccion {
+	font-size: clamp(1.5rem, 3vw, 2.2rem);
+	color: #5C3D2E;
+	margin-bottom: 25px;
+	border-bottom: 3px solid #8B6F47;
+	padding-bottom: 15px;
+}
+
+/* ===================== */
+/* 📋 LISTAS */
+/* ===================== */
+
+.lista {
+	list-style: none;
+	font-size: clamp(1rem, 2vw, 1.1rem);
+	color: #3E2723;
+}
+
+.lista li {
+	margin-bottom: 12px;
+	padding-left: 30px;
+	position: relative;
+}
+
+.lista li:before {
+	content: "✨";
+	position: absolute;
+	left: 0;
+}
+
+.lista-negativa li:before {
+	content: "✕";
+}
+
+/* ===================== */
+/* 🔗 LINKS */
+/* ===================== */
+
+.enlace {
+	color: #8B6F47;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 2px solid #A68968;
+}
+
+/* ===================== */
+/* 🔄 FLEX */
+/* ===================== */
+
+.contenido-si-gusta,
+.contenido-no-gusta,
+.referentes-contenido {
+	display: flex;
+	gap: clamp(15px, 3vw, 20px);
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+/* ===================== */
+/* 🧩 FLEX ITEMS */
+/* ===================== */
+
+.contenido-si-gusta .lista,
+.contenido-no-gusta .lista {
+	flex: 1;
+}
+
+/* ===================== */
+/* 🖼️ IMÁGENES */
+/* ===================== */
+
+.imagen-si-gusta,
+.imagen-no-gusta,
+.imagen-referentes {
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px;
+	flex-shrink: 0;
+}
+
+/* ===================== */
+/* 🎨 COLORES */
+/* ===================== */
+
+.rojo { color: rgb(255,101,87); }
+.amarillo { color: rgb(255,197,98); }
+
+/* ===================== */
+/* 📱 RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+	.contenido-si-gusta,
+	.contenido-no-gusta,
+	.referentes-contenido {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.imagen-si-gusta,
+	.imagen-no-gusta,
+	.imagen-referentes {
+		max-width: 250px;
+	}
+
+	.lista li {
+		padding-left: 0;
+	}
+
+	.lista li:before {
+		position: static;
+		margin-right: 8px;
+	}
+}
