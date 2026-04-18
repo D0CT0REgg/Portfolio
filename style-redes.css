@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Changa_one';
+	src: url('fonts/Changa_One/ChangaOne-Regular.ttf') format('truetype'),
+		 url('fonts/Changa_One/ChangaOne-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
+		 url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/* ===================== */
+/* 🌍 BASE */
+/* ===================== */
+
+.body {
+	font-family: "Montserrat", sans-serif;
+	background-image: url('img/fondo.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #4A2C1A;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ===================== */
+/* 🟤 HEADER */
+/* ===================== */
+
+.header {
+	background: linear-gradient(135deg, rgba(92, 61, 46, 0.85) 0%, rgba(122, 92, 66, 0.85) 30%, rgba(139, 111, 71, 0.85) 60%, rgba(166, 137, 104, 0.85) 100%);
+	padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 60px);
+	text-align: center;
+}
+
+.header__title {
+	font-family: "Changa_one", serif;
+	font-size: clamp(2.5rem, 8vw, 7rem);
+	color: #F5E6D3;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+	letter-spacing: 4px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+/* ===================== */
+/* 📦 MAIN */
+/* ===================== */
+
+.main {
+	flex: 1;
+	max-width: 1000px;
+	margin: 0 auto;
+	width: 100%;
+	padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 60px);
+}
+
+/* ===================== */
+/* 🧱 SOCIAL CARD */
+/* ===================== */
+
+.social {
+	background: linear-gradient(135deg, rgba(215, 195, 165, 0.75) 0%, rgba(190, 160, 130, 0.7) 100%);
+	padding: clamp(30px, 6vw, 60px) clamp(25px, 6vw, 70px);
+	margin-bottom: clamp(30px, 6vw, 60px);
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.social:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== */
+/* 🖼️ LOGO */
+/* ===================== */
+
+.social__logo {
+	width: clamp(70px, 10vw, 100px);
+	height: clamp(70px, 10vw, 100px);
+	object-fit: contain;
+	margin-bottom: 30px;
+}
+
+/* ===================== */
+/* 🏷️ TEXTOS */
+/* ===================== */
+
+.social__name {
+	font-size: clamp(1.5rem, 3vw, 2.5rem);
+	color: #5C3D2E;
+	margin-bottom: 10px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.social__username {
+	font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+	color: #8B6F47;
+	margin-bottom: 20px;
+	font-weight: 500;
+}
+
+.social__description {
+	font-size: clamp(1rem, 2vw, 1.1rem);
+	color: #3E2723;
+	line-height: 1.8;
+	max-width: 500px;
+}
+
+/* ===================== */
+/* 🎨 VARIANTES */
+/* ===================== */
+
+.social--pinterest {
+	border-top: 5px solid #E60023;
+}
+
+.social--deviantart {
+	border-top: 5px solid #05CC47;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+	.social {
+		margin-bottom: 40px;
+	}
+
+	.social:hover {
+		transform: none;
+	}
+}
