@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Changa_one';
+	src: url('fonts/Changa_One/ChangaOne-Regular.ttf') format('truetype'),
+		 url('fonts/Changa_One/ChangaOne-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
+		 url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/* ===================== */
+/* 🌍 BASE */
+/* ===================== */
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-image: url('img/fondo.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #4A2C1A;
+	min-height: 100vh;
+}
+
+/* ===================== */
+/* 🟤 HERO */
+/* ===================== */
+
+.header-hero {
+	background: linear-gradient(135deg, rgba(92, 61, 46, 0.85) 0%, rgba(122, 92, 66, 0.85) 30%, rgba(139, 111, 71, 0.85) 60%, rgba(166, 137, 104, 0.85) 100%);
+	padding: clamp(60px, 10vw, 150px) clamp(20px, 5vw, 60px);
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-hero h1 {
+	font-family: "Changa_one", serif;
+	font-size: clamp(2.8rem, 8vw, 10rem);
+	color: #F5E6D3;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+	letter-spacing: 4px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+/* ===================== */
+/* 📦 MAIN */
+/* ===================== */
+
+main {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: clamp(40px, 8vw, 120px) clamp(20px, 5vw, 60px);
+}
+
+.section-title {
+	font-size: clamp(1.8rem, 4vw, 3.5rem);
+	color: #3E2723;
+	margin-bottom: 30px;
+	font-weight: normal;
+	border-bottom: 4px solid #6B4423;
+	padding-bottom: 20px;
+	letter-spacing: 2px;
+}
+
+/* ===================== */
+/* 🧱 GRID */
+/* ===================== */
+
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: clamp(20px, 5vw, 80px);
+	margin-top: 70px;
+}
+
+/* ===================== */
+/* 🪵 CARD */
+/* ===================== */
+
+.card {
+	background: linear-gradient(135deg, rgba(215, 195, 165, 0.7) 0%, rgba(190, 160, 130, 0.65) 100%);
+	padding: clamp(30px, 6vw, 80px);
+	border-radius: 12px;
+	text-decoration: none;
+	color: #3E2723;
+	transition: all 0.4s ease;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+	transform: translateY(-15px);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(135deg, rgba(230, 210, 180, 0.85) 0%, rgba(210, 180, 150, 0.8) 100%);
+}
+
+.card h3 {
+	font-size: clamp(1.5rem, 3vw, 2.8rem);
+	margin-bottom: 20px;
+	color: #5C3D2E;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+
+.card p {
+	font-size: clamp(1rem, 2vw, 1.3rem);
+	color: #7A5C42;
+	line-height: 1.8;
+	font-style: italic;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 1024px) {
+	.cards-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-hero h1 {
+		letter-spacing: 2px;
+	}
+
+	.card:hover {
+		transform: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.section-title {
+		border-bottom: 2px solid #6B4423;
+	}
+
+	.cards-container {
+		gap: 25px;
+	}
+}
