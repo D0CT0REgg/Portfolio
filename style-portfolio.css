@@ -114,6 +114,7 @@ body {
 /* 🧩 ITEM */
 .galeria-item {
 	display: inline-block;
+	max-width: 300px;
 	width: 100%;
 	margin-bottom: 30px;
 	break-inside: avoid;
