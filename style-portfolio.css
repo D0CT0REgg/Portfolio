@@ -111,7 +111,7 @@ body {
 	column-gap: 30px;
 }
 
-/* 🧩 ITEM */
+/* 🧩 ITEM (CORREGIDO) */
 .galeria-item {
 	display: inline-block;
 	width: 100%;
@@ -131,11 +131,11 @@ body {
 	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
+/* 🖼️ IMAGEN */
 .galeria-item img {
 	width: 100%;
 	height: auto;
 	display: block;
-	border-radius: 12px;
 }
 
 /* ===================== */
